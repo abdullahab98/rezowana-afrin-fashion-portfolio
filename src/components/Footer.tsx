@@ -16,9 +16,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-[#332f2c] items-start">
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
-            <div className="brightness-125 invert-[0.1]">
-              <FashionLogo size="md" />
-            </div>
+            <FashionLogo size="md" theme="dark" />
             <p className="text-sm text-[#a69e96] font-light max-w-sm leading-relaxed">
               Haute couture atelier shaping emotion through fine South Asian embroidery, architectural draping, and contemporary heirloom craft.
             </p>
