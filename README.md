@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rezowana Afrin (Lisa) — Haute Couture & Textile Art Portfolio
 
-## Getting Started
+An aesthetic, editorial portfolio website crafted for fashion designer **Rezowana Afrin**, built with **Next.js 16**, **Tailwind CSS**, and **Framer Motion**.
 
-First, run the development server:
+Designed with an **Art Board & Painted Canvas aesthetic**, the experience features real-time fluid watercolor pigments, handmade washi-tape framing, editorial typography, smooth scroll transitions, and interactive atelier capsules.
+
+---
+
+## 🎨 Visual Design & Features
+
+- **Art Board Canvas Aesthetic**: Deckle-edge shadows, washi tape pin mounts, paper grain textures, and handwritten designer annotations.
+- **Dynamic Painting Background**: Living, interactive watercolor pigment washes rendered on an HTML5 canvas that gently shift like wet-on-wet paint.
+- **Animated Haute Couture Monogram**: Tailor's needle, threading loop, and rotating astrological stitch ring monogram seal.
+- **Curated Lookbook & Swatch Gallery**: Filterable by silhouette category (*Haute Couture*, *Bridal & Heritage*, *Contemporary Draping*, *Avant-Garde & Textures*, *Sketches & Craft*).
+- **Atelier Inspection Modal**: Click any swatch to reveal high-resolution photography, fabric composition, color swatches, and silhouette notes.
+- **Horizontal Runway Reel**: Filmstrip reel with smooth scrolling navigation.
+- **Comprehensive Dossier & Academic Pedigree**: Complete personal information, SSC & HSC credentials (*Millennium Scholastic School & College*), technical proficiencies, and contact information.
+- **Direct Showreel & Drive Integration**: One-click access to the designer's Google Drive archive and `Rezowana Afrin.mp4` video reel.
+- **Commission Inquiry Form**: Interactive bespoke bridal & couture commission request interface.
+
+---
+
+## 📁 How to Update Personal Information & Looks
+
+All designer information and portfolio pieces are centralized in a single configuration file:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/data/portfolioData.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. Updating Personal Information
+Open [`src/data/portfolioData.ts`](file:///home/abdullah/Abdullah/Projects/FAshion%20Design%20Portfolio/src/data/portfolioData.ts) and modify `PERSONAL_INFO`:
+- Name, bio, statement, and contact info (phone, email, addresses).
+- Academic history, institutions, and GPA results.
+- Skills, textile techniques, and design philosophy pillars.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. Adding or Modifying Portfolio Looks
+In the same file, update the `PORTFOLIO_ITEMS` array:
+```ts
+{
+  id: "look-20",
+  title: "Your New Outfit Title",
+  category: "Haute Couture",
+  collection: "Nocturne & Opulence",
+  year: "2024",
+  src: "/portfolio/your-image.jpg",
+  thumbnail: "/portfolio/your-image.jpg",
+  description: "Description of the drape and craftsmanship...",
+  materials: ["Silk Velvet", "Hand-beaded Crystals"],
+  palette: ["#121014", "#d4af37"],
+  silhouette: "Mermaid with Cathedral Train",
+  isFeatured: true
+}
+```
+Place new images in the [`public/portfolio/`](file:///home/abdullah/Abdullah/Projects/FAshion%20Design%20Portfolio/public/portfolio/) folder.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Running the Project
 
-To learn more about Next.js, take a look at the following resources:
+### Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Production Build
+```bash
+npm run build
+npm run start
+```

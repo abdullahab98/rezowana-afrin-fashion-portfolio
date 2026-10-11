@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --canvas-bg: #fffbf9;
+  --canvas-card: #ffffff;
+  --canvas-border: #f0e6e2;
+  --canvas-ink: #1a1715;
+  --canvas-muted: #6e675f;
+  --canvas-blush: #e27d8e;
+  --canvas-rose: #d6687a;
+  --canvas-yellow: #f5be38;
+  --canvas-teal: #4ea8a1;
+  --font-serif: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-handwriting: "Caveat", "Dancing Script", cursive;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--canvas-bg);
+  color: var(--canvas-ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
 }
+
+/* Custom Art Board Texture & Deckle Edge */
+.art-board-canvas {
+  background-color: #ffffff;
+  box-shadow: 
+    0 1px 3px rgba(30, 24, 18, 0.03),
+    0 12px 32px rgba(226, 125, 142, 0.06);
+  border: 1px solid rgba(240, 230, 226, 0.9);
+  position: relative;
+}
+
+/* Masking Tape effect */
+.masking-tape {
+  position: absolute;
+  height: 24px;
+  width: 90px;
+  background: rgba(254, 244, 230, 0.88);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transform: rotate(-3deg);
+  backdrop-filter: blur(2px);
+  border-left: 2px dashed rgba(220, 180, 160, 0.4);
+  border-right: 2px dashed rgba(220, 180, 160, 0.4);
+  z-index: 10;
+}
+
+/* Custom Scrollbar for Artboard Feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf5f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2c0ca;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d6a1b0;
+}
+
+/* Typography utilities */
+.font-editorial {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+.font-annotation {
+  font-family: var(--font-handwriting);
+}
+
+/* Image frame bevel & matte */
+.art-matte {
+  padding: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(30, 24, 18, 0.06), 0 1px 3px rgba(30, 24, 18, 0.04);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(240, 230, 226, 0.8);
+}
+
+.art-matte:hover {
+  transform: translateY(-4px) rotate(0.5deg);
+  box-shadow: 0 16px 36px rgba(226, 125, 142, 0.12), 0 2px 6px rgba(30, 24, 18, 0.06);
+}
+
