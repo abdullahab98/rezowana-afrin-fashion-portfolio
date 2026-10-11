@@ -79,7 +79,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   permanentAddress: "Chakgopal, Dinajpur, Bangladesh",
   dateOfBirth: "25 April, 2003",
   gender: "Female",
-  maritalStatus: "Unmarried",
+  maritalStatus: "Married",
   nationality: "Bangladeshi",
   religion: "Islam",
   bloodGroup: "O Positive (O+)",
