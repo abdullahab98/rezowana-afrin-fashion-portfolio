@@ -106,17 +106,17 @@ export const FashionLogo: React.FC<FashionLogoProps> = ({
       </div>
 
       {/* Brand Typography */}
-      <div className="flex flex-col text-left">
+      <div className="flex flex-col text-left leading-tight">
         <span
-          className={`font-serif tracking-[0.22em] font-semibold text-[#1a1715] uppercase transition-colors group-hover:text-[#b85d43] ${current.text}`}
+          className={`font-serif tracking-[0.16em] sm:tracking-[0.22em] font-semibold text-[#1a1715] uppercase transition-colors group-hover:text-[#b85d43] text-sm sm:text-base`}
         >
           Rezowana Afrin
         </span>
         {withSubtext && (
-          <div className="flex items-center gap-2">
-            <span className="h-[1px] w-4 bg-[#b85d43]/50" />
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <span className="h-[1px] w-3 sm:w-4 bg-[#b85d43]/50" />
             <span
-              className={`font-serif uppercase tracking-[0.3em] text-[#6e675f] group-hover:text-[#1a1715] transition-colors ${current.sub}`}
+              className={`font-serif uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#6e675f] group-hover:text-[#1a1715] transition-colors text-[8px] sm:text-[9px]`}
             >
               Haute Couture & Atelier
             </span>

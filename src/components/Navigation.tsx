@@ -32,14 +32,14 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
         isScrolled
-          ? "bg-[#fffbf9]/95 backdrop-blur-md shadow-sm border-b border-[#f0e6e2] py-3"
-          : "bg-[#fffbf9]/85 backdrop-blur-sm border-b border-[#f0e6e2]/70 py-4"
+          ? "bg-[#fffbf9]/95 backdrop-blur-md shadow-sm border-b border-[#f0e6e2] py-2.5 sm:py-3"
+          : "bg-[#fffbf9]/90 backdrop-blur-md border-b border-[#f0e6e2]/80 py-3 sm:py-4"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Brand Logo */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
+        {/* Brand Logo - compact on mobile so it never gets clipped */}
         <a href="#hero" className="outline-none focus:ring-0 shrink-0">
           <FashionLogo size="sm" withSubtext={true} />
         </a>
@@ -86,30 +86,30 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
         {/* Mobile menu hamburger button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-[#1a1715] hover:text-[#e27d8e] transition-colors"
+          className="lg:hidden p-2 text-[#1a1715] hover:text-[#e27d8e] transition-colors rounded-md active:bg-[#f0e6e2]"
           aria-label="Toggle Navigation Menu"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu - Opens neatly below header */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.2 }}
-            className="lg:hidden bg-[#fffbf9] border-b border-[#f0e6e2] px-6 py-6 shadow-xl"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="lg:hidden bg-[#fffbf9] border-b border-[#f0e6e2] px-6 py-5 shadow-xl overflow-hidden"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3.5">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs font-serif tracking-[0.18em] uppercase text-[#1a1715] hover:text-[#e27d8e] transition-colors py-1"
+                  className="text-xs font-serif tracking-[0.18em] uppercase text-[#1a1715] hover:text-[#e27d8e] transition-colors py-1.5"
                 >
                   {link.label}
                 </a>
