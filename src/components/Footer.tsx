@@ -75,9 +75,6 @@ export const Footer: React.FC = () => {
               {PERSONAL_INFO.presentAddress}
             </p>
             <p className="text-xs font-mono text-white">
-              {PERSONAL_INFO.phone}
-            </p>
-            <p className="text-xs font-mono text-white">
               {PERSONAL_INFO.email}
             </p>
             <div className="pt-2">

@@ -39,7 +39,6 @@ export interface PersonalInfo {
   nationality: string;
   religion: string;
   bloodGroup: string;
-  phone: string;
   email: string;
   driveFolderUrl: string;
   videoShowreelUrl: string;
@@ -83,7 +82,6 @@ export const PERSONAL_INFO: PersonalInfo = {
   nationality: "Bangladeshi",
   religion: "Islam",
   bloodGroup: "O Positive (O+)",
-  phone: "+880 1795-973361",
   email: "afrinlisa2k3@gmail.com",
   driveFolderUrl: "https://drive.google.com/drive/folders/16FnMnNGz04LbEQeHiHep6L26nSRbICRZ",
   videoShowreelUrl: "https://drive.google.com/file/d/1rusu3pPgcr37gUaam-kXynzof94OBIjC/view?usp=drive_link",

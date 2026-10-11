@@ -10,7 +10,6 @@ import {
   MapPin, 
   Calendar, 
   Mail, 
-  Phone, 
   FileText, 
   ExternalLink,
   Sparkles,
@@ -210,21 +209,7 @@ export const BioSection: React.FC = () => {
             </div>
 
             {/* Direct Connect Quick Links */}
-            <div className="p-4 sm:p-6 bg-[#efe7d8] border border-[#ded3c0] flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 overflow-hidden">
-              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-                <Phone className="w-4 h-4 text-[#b85d43] shrink-0" />
-                <span className="text-xs font-mono font-bold text-[#1a1715] truncate">
-                  {PERSONAL_INFO.phone}
-                </span>
-                <button
-                  onClick={() => copyToClipboard(PERSONAL_INFO.phone, "phone")}
-                  className="p-1 hover:text-[#b85d43] transition-colors"
-                  title="Copy Phone"
-                >
-                  {copiedField === "phone" ? <Check className="w-3.5 h-3.5 text-green-700" /> : <Copy className="w-3.5 h-3.5 text-[#6e675f]" />}
-                </button>
-              </div>
-
+            <div className="p-4 sm:p-6 bg-[#efe7d8] border border-[#ded3c0] flex items-center justify-between gap-3 sm:gap-4 overflow-hidden">
               <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                 <Mail className="w-4 h-4 text-[#b85d43] shrink-0" />
                 <span className="text-xs font-mono font-bold text-[#1a1715] truncate">
@@ -238,6 +223,13 @@ export const BioSection: React.FC = () => {
                   {copiedField === "email" ? <Check className="w-3.5 h-3.5 text-green-700" /> : <Copy className="w-3.5 h-3.5 text-[#6e675f]" />}
                 </button>
               </div>
+
+              <a
+                href="#contact"
+                className="text-xs font-serif uppercase tracking-wider text-[#b85d43] hover:text-[#1a1715] transition-colors font-medium underline underline-offset-4"
+              >
+                Atelier Inquiry &rarr;
+              </a>
             </div>
           </div>
         </div>

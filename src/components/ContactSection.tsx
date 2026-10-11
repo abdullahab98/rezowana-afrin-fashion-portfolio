@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   Mail, 
-  Phone, 
   MapPin, 
   Calendar, 
   Send, 
@@ -69,21 +68,6 @@ export const ContactSection: React.FC = () => {
                     <p className="text-sm font-medium text-[#1a1715]">
                       {PERSONAL_INFO.presentAddress}
                     </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3.5">
-                  <Phone className="w-5 h-5 text-[#b85d43] shrink-0 mt-0.5" />
-                  <div>
-                    <span className="block text-[11px] font-mono uppercase tracking-wider text-[#6e675f]">
-                      Direct Telephone
-                    </span>
-                    <a
-                      href={`tel:${PERSONAL_INFO.phone.replace(/[^0-9+]/g, "")}`}
-                      className="text-sm font-mono font-medium text-[#1a1715] hover:text-[#b85d43] transition-colors"
-                    >
-                      {PERSONAL_INFO.phone}
-                    </a>
                   </div>
                 </div>
 
