@@ -38,7 +38,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative min-h-screen text-[#1a1715]">
+    <main className="relative min-h-screen text-[#1a1715] w-full max-w-full overflow-x-hidden">
       {/* Living Watercolor Fluid Painting Background */}
       <PaintingBackground />
 

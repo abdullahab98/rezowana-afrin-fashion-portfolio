@@ -10,28 +10,28 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center items-center px-6 md:px-12 overflow-hidden"
+      className="relative min-h-screen pt-28 sm:pt-32 pb-16 sm:pb-20 flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 overflow-hidden w-full max-w-full"
     >
       {/* Decorative Atelier Sketch Lines & Corner Marks */}
-      <div className="absolute top-28 left-8 md:left-16 text-[11px] font-mono tracking-widest text-[#6e675f]/50 select-none">
+      <div className="absolute top-24 sm:top-28 left-4 sm:left-8 md:left-16 text-[10px] sm:text-[11px] font-mono tracking-widest text-[#6e675f]/50 select-none">
         FIG. 01 — HAUTE COUTURE ATELIER &bull; ARCHIVE
       </div>
-      <div className="absolute top-28 right-8 md:right-16 text-[11px] font-mono tracking-widest text-[#6e675f]/50 select-none hidden sm:block">
+      <div className="absolute top-24 sm:top-28 right-4 sm:right-8 md:right-16 text-[10px] sm:text-[11px] font-mono tracking-widest text-[#6e675f]/50 select-none hidden md:block">
         DHAKA &bull; DINAJPUR &bull; 23°48'N 90°24'E
       </div>
 
-      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
         {/* Left Column: Editorial Heading & Designer Statement */}
-        <div className="lg:col-span-7 flex flex-col items-start z-10">
+        <div className="lg:col-span-7 flex flex-col items-start z-10 w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[#f3ede2] border border-[#e2d8c6] mb-6 shadow-sm"
+            className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#f3ede2] border border-[#e2d8c6] mb-5 shadow-sm max-w-full overflow-hidden"
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#b85d43]" />
-            <span className="text-[11px] font-serif tracking-[0.25em] uppercase text-[#1a1715]">
-              Haute Couture &bull; Textile Sculpture &bull; Art Board
+            <Sparkles className="w-3.5 h-3.5 text-[#b85d43] shrink-0" />
+            <span className="text-[10px] sm:text-[11px] font-serif tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#1a1715] truncate">
+              Haute Couture &bull; Textile Sculpture
             </span>
           </motion.div>
 
@@ -39,7 +39,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-[#1a1715] leading-[0.98] tracking-tight mb-6"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-[#1a1715] leading-[0.98] tracking-tight mb-5"
           >
             Rezowana <br />
             <span className="italic font-light text-[#b85d43] relative inline-block">
@@ -64,7 +64,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-[#4a443d] max-w-xl font-light leading-relaxed mb-4"
+            className="text-base sm:text-lg md:text-xl text-[#4a443d] max-w-xl font-light leading-relaxed mb-4"
           >
             {PERSONAL_INFO.tagline}
           </motion.p>
@@ -73,13 +73,13 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="p-4 md:p-5 bg-white/70 backdrop-blur-sm border-l-2 border-[#b85d43] border-y border-r border-[#e8e0d2] max-w-xl mb-8 shadow-[0_4px_20px_rgba(26,23,21,0.03)]"
+            className="p-4 md:p-5 bg-white/70 backdrop-blur-sm border-l-2 border-[#b85d43] border-y border-r border-[#e8e0d2] w-full max-w-xl mb-6 sm:mb-8 shadow-[0_4px_20px_rgba(26,23,21,0.03)]"
           >
-            <p className="font-annotation text-2xl text-[#b85d43] leading-snug">
+            <p className="font-annotation text-xl sm:text-2xl text-[#b85d43] leading-snug">
               "{PERSONAL_INFO.statement}"
             </p>
-            <span className="block mt-2 text-[11px] font-serif uppercase tracking-[0.2em] text-[#6e675f]">
-              — Lisa Afrin, Creative Director
+            <span className="block mt-2 text-[10px] sm:text-[11px] font-serif uppercase tracking-[0.2em] text-[#6e675f]">
+              — Lisa, Creative Director
             </span>
           </motion.div>
 
@@ -88,11 +88,11 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap items-center gap-4"
+            className="flex flex-wrap items-center gap-3 sm:gap-4 w-full"
           >
             <a
               href="#artboard"
-              className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#1a1715] text-[#faf7f2] font-serif text-xs tracking-[0.25em] uppercase hover:bg-[#b85d43] transition-colors shadow-lg hover:shadow-xl"
+              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 bg-[#1a1715] text-[#faf7f2] font-serif text-xs tracking-[0.2em] uppercase hover:bg-[#b85d43] transition-colors shadow-lg"
             >
               <span>Explore Art Board</span>
               <Compass className="w-4 h-4" />
@@ -102,49 +102,49 @@ export const HeroSection: React.FC = () => {
               href={PERSONAL_INFO.videoShowreelUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-white/80 hover:bg-white text-[#1a1715] border border-[#d8cfbe] font-serif text-xs tracking-[0.2em] uppercase hover:border-[#b85d43] transition-all"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-white/80 hover:bg-white text-[#1a1715] border border-[#d8cfbe] font-serif text-xs tracking-[0.18em] uppercase hover:border-[#b85d43] transition-all"
             >
               <Play className="w-3.5 h-3.5 text-[#b85d43] fill-current" />
-              <span>Watch Video Reel</span>
+              <span>Watch Reel</span>
             </a>
 
             <a
               href={PERSONAL_INFO.driveFolderUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3.5 text-xs font-serif tracking-[0.18em] uppercase text-[#6e675f] hover:text-[#1a1715] underline underline-offset-4 transition-colors"
+              className="inline-flex items-center gap-2 py-2 text-xs font-serif tracking-[0.16em] uppercase text-[#6e675f] hover:text-[#1a1715] underline underline-offset-4 transition-colors"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Google Drive Archive</span>
+              <span>Drive Vault</span>
             </a>
           </motion.div>
         </div>
 
         {/* Right Column: Layered Art Board Collage Hero Visual */}
-        <div className="lg:col-span-5 relative flex justify-center items-center min-h-[460px] md:min-h-[560px]">
+        <div className="lg:col-span-5 relative flex justify-center items-center min-h-[380px] sm:min-h-[460px] md:min-h-[560px] w-full max-w-full overflow-hidden sm:overflow-visible py-4">
           {/* Background Painterly Splash */}
-          <div className="absolute w-80 h-80 rounded-full bg-gradient-to-tr from-[#b85d43]/20 via-[#c98b2c]/20 to-transparent blur-3xl pointer-events-none" />
+          <div className="absolute w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-gradient-to-tr from-[#b85d43]/15 via-[#c98b2c]/15 to-transparent blur-3xl pointer-events-none" />
 
           {/* Secondary Layered Frame - Behind */}
           <motion.div
             initial={{ opacity: 0, rotate: -8, scale: 0.9 }}
-            animate={{ opacity: 1, rotate: -5, scale: 1 }}
+            animate={{ opacity: 1, rotate: -4, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="absolute top-4 -left-4 sm:left-4 w-56 sm:w-64 md:w-72 art-matte z-10"
+            className="absolute top-2 left-2 sm:left-4 w-44 sm:w-64 md:w-72 art-matte z-10"
           >
             {/* Washi masking tape effect */}
-            <div className="masking-tape -top-3 left-1/2 -translate-x-1/2" />
+            <div className="masking-tape -top-2.5 left-1/2 -translate-x-1/2 w-16 sm:w-20" />
             <div className="relative aspect-[3/4] overflow-hidden bg-[#e8e0d2]">
               <Image
                 src="/portfolio/MHP00149.jpg"
                 alt="Rezowana Afrin Royal Bridal Drape"
                 fill
-                sizes="(max-width: 768px) 250px, 300px"
+                sizes="(max-width: 768px) 200px, 300px"
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="pt-2 text-center">
-              <span className="font-annotation text-lg text-[#6e675f]">
+            <div className="pt-1.5 text-center">
+              <span className="font-annotation text-sm sm:text-lg text-[#6e675f]">
                 Nocturne Crimson Study No. 11
               </span>
             </div>
@@ -155,33 +155,33 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, rotate: 6, scale: 0.9 }}
             animate={{ opacity: 1, rotate: 3, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="relative w-64 sm:w-72 md:w-80 art-matte z-20 shadow-2xl ml-12 sm:ml-20 mt-12"
+            className="relative w-52 sm:w-72 md:w-80 art-matte z-20 shadow-2xl ml-16 sm:ml-20 mt-8 sm:mt-12"
           >
             {/* Top Washi Tape */}
-            <div className="masking-tape -top-3 right-6 rotate-3" />
+            <div className="masking-tape -top-2.5 right-4 sm:right-6 rotate-3 w-16 sm:w-20" />
             <div className="relative aspect-[3/4] overflow-hidden bg-[#e8e0d2]">
               <Image
                 src="/portfolio/MHP00075.jpg"
                 alt="Rezowana Afrin Haute Couture Velvet Gown"
                 fill
                 priority
-                sizes="(max-width: 768px) 300px, 350px"
+                sizes="(max-width: 768px) 250px, 350px"
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute top-3 left-3 bg-[#1a1715]/80 backdrop-blur-md px-2.5 py-1 text-[10px] tracking-widest text-[#faf7f2] font-mono uppercase">
+              <div className="absolute top-2.5 left-2.5 bg-[#1a1715]/80 backdrop-blur-md px-2 py-0.5 text-[9px] sm:text-[10px] tracking-widest text-[#faf7f2] font-mono uppercase">
                 COUTURE ARCHIVE
               </div>
             </div>
-            <div className="pt-3 px-1 flex justify-between items-end border-t border-[#f0eae0] mt-2">
+            <div className="pt-2 px-1 flex justify-between items-end border-t border-[#f0eae0] mt-1.5">
               <div>
-                <p className="font-serif text-xs font-semibold uppercase tracking-wider text-[#1a1715]">
-                  Velvet Midnight Plissé
+                <p className="font-serif text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#1a1715]">
+                  Alabaster Plissé Gown
                 </p>
-                <p className="text-[10px] text-[#6e675f] font-mono tracking-tight">
-                  Hand-draped Silk Velvet
+                <p className="text-[9px] sm:text-[10px] text-[#6e675f] font-mono tracking-tight">
+                  Hand-draped Silhouette
                 </p>
               </div>
-              <span className="font-annotation text-xl text-[#b85d43]">Look 01</span>
+              <span className="font-annotation text-base sm:text-xl text-[#b85d43]">Look 01</span>
             </div>
           </motion.div>
 

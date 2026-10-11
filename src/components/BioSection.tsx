@@ -210,10 +210,10 @@ export const BioSection: React.FC = () => {
             </div>
 
             {/* Direct Connect Quick Links */}
-            <div className="p-6 bg-[#efe7d8] border border-[#ded3c0] flex flex-wrap items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#b85d43]" />
-                <span className="text-xs font-mono font-bold text-[#1a1715]">
+            <div className="p-4 sm:p-6 bg-[#efe7d8] border border-[#ded3c0] flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 overflow-hidden">
+              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+                <Phone className="w-4 h-4 text-[#b85d43] shrink-0" />
+                <span className="text-xs font-mono font-bold text-[#1a1715] truncate">
                   {PERSONAL_INFO.phone}
                 </span>
                 <button
@@ -225,9 +225,9 @@ export const BioSection: React.FC = () => {
                 </button>
               </div>
 
-              <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#b85d43]" />
-                <span className="text-xs font-mono font-bold text-[#1a1715]">
+              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+                <Mail className="w-4 h-4 text-[#b85d43] shrink-0" />
+                <span className="text-xs font-mono font-bold text-[#1a1715] truncate">
                   {PERSONAL_INFO.email}
                 </span>
                 <button
