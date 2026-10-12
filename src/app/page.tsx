@@ -11,7 +11,6 @@ import { PhilosophySection } from "@/components/PhilosophySection";
 import { BioSection } from "@/components/BioSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { ClaymorphismDemo } from "@/components/ClaymorphismDemo";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -69,9 +68,6 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Claymorphism Test Demo Floating Sandbox */}
-      <ClaymorphismDemo />
     </main>
   );
 }

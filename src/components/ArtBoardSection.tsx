@@ -204,22 +204,23 @@ export const ArtBoardSection: React.FC = () => {
       <AnimatePresence>
         {activeItem && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10">
-            {/* Backdrop */}
+            {/* Backdrop - High Performance Solid Alpha (No expensive blur) */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
               onClick={() => setActiveItem(null)}
-              className="absolute inset-0 bg-[#1a1715]/80 backdrop-blur-md"
+              className="absolute inset-0 bg-[#1a1715]/75 cursor-pointer will-change-opacity"
             />
 
-            {/* Modal Dialog */}
+            {/* Modal Dialog - Lightweight smooth hardware-accelerated animation */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.94, y: 20 }}
+              initial={{ opacity: 0, scale: 0.97, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.94, y: 20 }}
-              transition={{ type: "spring", stiffness: 350, damping: 30 }}
-              className="relative w-full max-w-5xl max-h-[92vh] bg-[#faf7f2] border border-[#e2d8c6] shadow-2xl overflow-y-auto z-10 p-6 sm:p-8 md:p-10"
+              exit={{ opacity: 0, scale: 0.97, y: 10 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="relative w-full max-w-5xl max-h-[92vh] bg-[#ffffff] border border-[#f0e6e2] shadow-2xl overflow-y-auto z-10 p-5 sm:p-8 md:p-10 will-change-transform"
             >
               {/* Close Button */}
               <button
